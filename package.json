@@ -9,7 +9,8 @@
     "test": "ng test",
     "e2e": "ng e2e",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "lint": "tsc --noEmit && eslint . --ext js,ts,json --quiet --fix"
   },
   "private": true,
   "dependencies": {
@@ -37,12 +38,17 @@
     "@types/jasmine": "~3.8.0",
     "@types/jest": "27.0.2",
     "@types/node": "^12.11.1",
+    "@typescript-eslint/eslint-plugin": "^4.32.0",
     "cucumber": "^7.0.0-rc.0",
     "cypress": "8.5.0",
     "cypress-cucumber-preprocessor": "^4.2.0",
-    "jasmine-core": "~3.8.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-angular": "^4.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "jest": "27.2.2",
-    "karma-coverage": "~2.0.3",
+    "prettier": "^2.4.1",
+    "prettier-eslint": "^13.0.0",
     "resolve": "^1.20.0",
     "typescript": "~4.3.5"
   },
