@@ -1,6 +1,12 @@
-# AngularJestCypress
+# Angular Jest Cypress
 
-Create new project with angular/cli, exacuting  `ng new <nombre del proyecto>`
+* Clone or use with template
+* Run `nmp i`
+* Enjoy creating solutions
+
+## How to replicate this base project
+* Install or update the @angular/cli
+* Create new project with @angular/cli, executing  `ng new <nombre del proyecto>`
 
 ##Jest Installation and Configuration
 
