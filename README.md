@@ -45,3 +45,26 @@ Create new project with angular/cli, exacuting  `ng new <nombre del proyecto>`
   ng run {project-name}:cypress-open
   ng run {project-name}:cypress-run //for CI/CD
   ```
+
+##Cucumber Installation and Configuration in Cypress
+* Install packeges `npm install --save-dev cucumber cypress-cucumber-preprocessor @types/cypress-cucumber-preprocessor @cypress/browserify-preprocessor resolve`
+* Change `cypress/plugins/index.ts` for `cypress/plugins/index.js`
+* Copy in to `cypress/plugins/index.js`:
+  ```
+
+  const browserify = require('@cypress/browserify-preprocessor');
+  const cucumber = require('cypress-cucumber-preprocessor').default;
+  const resolve = require('resolve');
+  
+  module.exports = (on, config) => {
+      const options = {
+          ...browserify.defaultOptions,
+      typescript: resolve.sync('typescript', { baseDir: config.projectRoot }),
+  };
+  
+      on('file:preprocessor', cucumber(options));
+  };
+
+  ```
+* Add in `cypress.json`: `"testFiles": "**/*.feature",`
+* Change in `cypress.json`: `"pluginsFile": "cypress/plugins/index.ts",` to `"pluginsFile": "cypress/plugins/index.js",`
