@@ -44,6 +44,6 @@ testem.log
 .DS_Store
 Thumbs.db
 
-#cypress
-cypress/screenshots/*
+#Cypress
 cypress/videos/*
+cypress/screenshots/*
