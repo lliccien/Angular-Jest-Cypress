@@ -39,7 +39,7 @@ Create new project with angular/cli, exacuting  `ng new <nombre del proyecto>`
   "include": ["**/*.ts"]
   }
   ```
-* Run tests running:
+* Run tests :
   ```
   ng e2e
   ng run {project-name}:cypress-open
@@ -68,3 +68,10 @@ Create new project with angular/cli, exacuting  `ng new <nombre del proyecto>`
   ```
 * Add in `cypress.json`: `"testFiles": "**/*.feature",`
 * Change in `cypress.json`: `"pluginsFile": "cypress/plugins/index.ts",` to `"pluginsFile": "cypress/plugins/index.js",`
+
+##ESlint installation and configuration
+* Execute `ng add @angular-eslint/schematics`
+* Run lint :
+  ```
+  ng lint
+  ```

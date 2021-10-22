@@ -1,4 +1,6 @@
 {
+  "trashAssetsBeforeRuns": false,
+  "video": false,
   "testFiles": "**/*.feature",
   "integrationFolder": "cypress/integration",
   "supportFile": "cypress/support/index.ts",
