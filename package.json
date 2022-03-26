@@ -10,7 +10,9 @@
     "e2e": "ng e2e",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "private": true,
   "dependencies": {
@@ -25,7 +27,8 @@
     "@briebug/jest-schematic": "^3.1.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@angular-builders/jest": "12.1.2",
@@ -54,5 +57,6 @@
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
-  }
+  },
+  "snyk": true
 }
